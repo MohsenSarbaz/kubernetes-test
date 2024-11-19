@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deploy
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      volumes:
+        - name: data-volume
+          persistentVolumeClaim:
+            claimName: myclaim
+      containers:
+        - name: nginx-container
+          image: registry.docker.ir/nginx
+          volumeMounts:
+            - mountPath: /mnt/config
+              name: data-volume
