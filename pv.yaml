@@ -5,9 +5,9 @@ metadata:
   namespace: dev
 spec:
   capacity:
-    storage: 100Mi
+    storage: 200Mi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/var/local/mohsen"
+    path: "/var/local/mohsen2"
