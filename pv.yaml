@@ -2,6 +2,7 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: pv-vol1
+  namespace: dev
 spec:
   capacity:
     storage: 100Mi
