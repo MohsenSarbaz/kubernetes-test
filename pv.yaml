@@ -7,7 +7,7 @@ spec:
   capacity:
     storage: 200Mi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: "/var/local/mohsen2"
